@@ -1,0 +1,13 @@
+
+@mixin kau {
+  font-family: "Kaushan Script", "Arial", sans-serif;
+}
+
+@mixin rob {
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+@mixin bef {
+  content: "";
+  position: absolute;
+}

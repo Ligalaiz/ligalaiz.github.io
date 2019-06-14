@@ -1,0 +1,108 @@
+.what {
+  padding: 80px 0;
+  &__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+    margin: 0 -15px;
+  }
+  &__item {
+    width: 50%;
+    padding: 0 15px;
+  }
+  &__img {
+    display: block;
+  }
+}
+
+.accordion {
+  &__item {
+    margin-bottom: 10px;
+
+    border: 1px solid $grey;
+    &.active .accordion__content {
+      display: block;
+    }
+    &.active .accordion__header {
+      border-bottom: 1px solid $grey;
+      &::after {
+        -webkit-transform: translateY(-50%) rotate(0);
+            -ms-transform: translateY(-50%) rotate(0);
+                transform: translateY(-50%) rotate(0);
+      }
+    }
+  }
+  &__header {
+    position: relative;
+
+    padding: 15px 20px 15px 60px;
+    border-bottom: 1px solid transparent;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+    &::before,
+    &::after {
+      @include bef;
+    }
+      &::before {
+      left: 20px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+
+      width: 32px;
+      height: 32px;
+
+      background-repeat: no-repeat;
+    }
+    &::after {
+      right: 15px;
+      top: 50%;
+
+      width: 22px;
+      height: 12px;
+
+      background-image: url("../img/what/arrow.png");
+      background-repeat: no-repeat;
+      -webkit-transform: translateY(-50%) rotate(-180deg);
+          -ms-transform: translateY(-50%) rotate(-180deg);
+              transform: translateY(-50%) rotate(-180deg);
+    }
+  }
+  &__content {
+    display: none;
+    padding: 15px 20px;
+
+    font-size: 15px;
+    @include rob;
+    font-style: italic;
+    font-weight: 300;
+    color: $grey-extra;
+  }
+}
+.photography::before {
+  background-image: url("../img/what/icon-picture.png");
+}
+.creativity::before {
+  background-image: url("../img/what/icon-equalizer.png");
+}
+.web-design::before {
+  background-image: url("../img/what/icon-bullseye.png");
+}
+
+@media (max-width: 768px) {
+  .what {
+    padding: 40px 0;
+    &__item {
+      width: 100%;
+    }
+    &__img {
+      display: none;
+    }
+  }
+}

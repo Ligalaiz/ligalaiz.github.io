@@ -1,0 +1,92 @@
+.service {
+  padding: 80px 0;
+  &__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  &__item {
+    position: relative;
+
+    width: 33.33333%;
+    padding: 0 35px 40px 85px;
+    margin-bottom: 40px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 28px;
+
+      width: 32px;
+      height: 32px;
+
+      background-repeat: no-repeat;
+    }
+  }
+  &__title {
+    margin-bottom: 10px;
+
+    text-transform: uppercase;
+  }
+  &__text {
+    @include rob;
+  }
+}
+.photo::before {
+  background-image: url("../img/service/icon-alarm.png");
+}
+.design::before {
+  background-image: url("../img/service/icon-graph.png");
+}
+.creat::before {
+  background-image: url("../img/service/icon-comp.png");
+}
+.seo::before {
+  background-image: url("../img/service/icon-book.png");
+}
+.css::before {
+  background-image: url("../img/service/icon-home.png");
+}
+.dig::before {
+  background-image: url("../img/service/icon-img.png");
+}
+.photo,
+.design,
+.creat {
+  border-bottom: 1px solid $grey;
+}
+
+@media (max-width: 960px) {
+  .service {
+    &__item {
+      width: 50%;
+    }
+  }
+  .photo,
+  .design,
+  .creat {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .service {
+    padding: 40px 0 0;
+    &__wrap {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+    &__item {
+      width: 100%;
+      max-width: 400px;
+      padding-left: 55px;
+      padding-right: 0;
+      &::before {
+        left: 0;
+      }
+    }
+  }
+}

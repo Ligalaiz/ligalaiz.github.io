@@ -1,0 +1,33 @@
+.map {
+  padding: 40px 0;
+
+  background-color: $grey;
+  background-image: url("../img/map/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__wrap {
+    text-align: center;
+  }
+  &__title {
+    font-size: 24px;
+    color: $red-light;
+    font-weight: 700;
+    & a {
+      color: inherit;
+      text-transform: uppercase;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &::after {
+      content: "";
+
+      display: block;
+      width: 60px;
+      height: 3px;
+      margin: 10px auto 0;
+
+      background-color: $red-light;
+    }
+  }
+}

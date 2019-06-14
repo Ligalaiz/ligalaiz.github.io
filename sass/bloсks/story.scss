@@ -1,0 +1,163 @@
+.story {
+  padding: 80px 0;
+}
+.section {
+  &__header {
+    margin: 0 auto 80px;
+
+    width: 100%;
+    max-width: 950px;
+
+    text-align: center;
+  }
+  &__suptitle {
+    @include kau;
+    font-size: 24px;
+    color: $black;
+  }
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    color: $black;
+
+    text-transform: uppercase;
+    &::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      margin: 30px auto;
+
+      background-color: $red-light;
+    }
+  }
+  &__text {
+    font-size: 15px;
+    color: $grey-extra;
+  }
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  &__item {
+    position: relative;
+
+    width: 30%;
+
+    background-color: $green;
+  }
+  &__wrap {
+    &:hover .card__text {
+      opacity: 1;
+    }
+    &:hover .card__img {
+      -webkit-transform: translate3d(-10px, -10px, 0);
+              transform: translate3d(-10px, -10px, 0);
+    }
+    &:hover .card__img img {
+      opacity: 0.1;
+    }
+  }
+  &__img {
+    background: -webkit-gradient(linear, left top, left bottom, from($red-light), to($yellow));
+    background: -webkit-linear-gradient(top, $red-light, $yellow);
+    background: -o-linear-gradient(top, $red-light, $yellow);
+    background: linear-gradient(to bottom, $red-light, $yellow);
+
+    -webkit-transition: -webkit-transform 0.2s linear;
+
+    transition: -webkit-transform 0.2s linear;
+
+    -o-transition: transform 0.2s linear;
+
+    transition: transform 0.2s linear;
+
+    transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+    & img {
+      display: block;
+
+      -webkit-transition: opacity 0.2s linear;
+
+      -o-transition: opacity 0.2s linear;
+
+      transition: opacity 0.2s linear;
+    }
+  }
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+
+    color: $white;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+
+    opacity: 0;
+    -webkit-transform: translate3d(-55%, -55%, 0);
+            transform: translate3d(-55%, -55%, 0);
+    -webkit-transition: opacity 0.2 linear;
+    -o-transition: opacity 0.2 linear;
+    transition: opacity 0.2 linear;
+    &::before {
+      content: "";
+
+      display: block;
+      margin: 0 auto;
+      width: 32px;
+      height: 23px;
+
+      background-image: url("../img/story/icon-users.png");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .story {
+    padding: 40px 0;
+  }
+  .section__header {
+    margin-bottom: 50px;
+  }
+  .card {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    &__item {
+      width: 100%;
+      max-width: 380px;
+      margin-bottom: 30px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .section {
+    &__title {
+      font-size: 24px;
+      &::after {
+        margin: 20px auto;
+      }
+    }
+    &__suptitle {
+      font-size: 20px;
+    }
+    &__header {
+      margin-bottom: 50px;
+    }
+  }
+}

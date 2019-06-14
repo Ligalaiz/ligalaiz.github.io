@@ -1,0 +1,74 @@
+.meet {
+  padding: 80px 0;
+}
+.meet__card .card {
+  &__text {
+    top: 45%;
+  }
+  &__text::before {
+    display: none;
+  }
+  &__item {
+    background-color: transparent;
+  }
+  &__wrap {
+    margin-bottom: 20px;
+
+    background-color: $green;
+  }
+  &__desc {
+    text-align: center;
+  }
+  &__name {
+    margin-bottom: 5px;
+
+    text-transform: uppercase;
+  }
+  &__proff {
+    font-size: 15px;
+    @include rob;
+    font-style: italic;
+    color: $grey-extra;
+  }
+}
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  &__item {
+    width: 55px;
+    height: 55px;
+    padding: 12px 10px;
+
+    font-size: 30px;
+    text-decoration: none;
+    color: $red-light;
+    line-height: 1;
+
+    background-color: $yellow;
+    border-right: 1px solid $red-light;
+
+    -webkit-transition: background 0.2s linear, color 0.2s linear;
+
+    -o-transition: background 0.2s linear, color 0.2s linear;
+
+    transition: background 0.2s linear, color 0.2s linear;
+    &:last-child {
+      border-right: 0;
+    }
+    &:hover {
+      color: $white;
+
+      background-color: $red-light;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .meet {
+    padding: 40px 0 0;
+  }
+}

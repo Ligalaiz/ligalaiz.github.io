@@ -1,0 +1,34 @@
+.company {
+  padding: 60px 0;
+
+  background-color: $grey-light;
+}
+.logo {
+  &__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center ;
+        -ms-flex-align: center ;
+            align-items: center ;
+  }
+  &__img {
+    display: block;
+  }
+}
+@media (mAX-width: 575px) {
+  .company {
+    padding: 40px 0;
+  }
+  .logo {
+    &__wrap {
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+    }
+  }
+}
