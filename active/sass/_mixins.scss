@@ -1,0 +1,16 @@
+@mixin rel {
+  font-family: "Raleway", "Arial", sans-serif;
+}
+
+@mixin op {
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+@mixin card {
+  font-family: "Cardo", "Arial", sans-serif;
+}
+
+@mixin bef {
+  content: "";
+  position: absolute;
+}

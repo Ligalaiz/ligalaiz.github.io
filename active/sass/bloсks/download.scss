@@ -1,0 +1,35 @@
+.download {
+  padding: 90px 0;
+
+  text-align: center;
+  &__title {
+    margin-bottom: 10px;
+
+    @include rel;
+    font-weight: 300;
+    font-size: 28px;
+  }
+  &__text {
+    margin-bottom: 30px;
+
+    font-size: 13px;
+    font-weight: 700;
+    @include rel;
+    text-transform: uppercase;
+  }
+  &__btn {
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 767px) {
+  .download {
+    padding: 60px 0;
+    &__btn {
+      min-width: 260px;
+    }
+    &__title {
+      font-size: 24px;
+    }
+  }
+}

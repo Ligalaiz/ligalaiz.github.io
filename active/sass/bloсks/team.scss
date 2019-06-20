@@ -1,0 +1,116 @@
+.team {
+  padding: 100px 0;
+  &__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  &__item {
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+
+    @include rel;
+  }
+  &__img {
+    display: block;
+    margin-bottom: 20px;
+  }
+  &__name {
+    margin-bottom: 8px;
+
+    font-size: 22px;
+    line-height: 1;
+  }
+  &__prof {
+    margin-bottom: 15px;
+
+    color: $red;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  &__text {
+    margin-bottom: 31px;
+
+    color: $grey-darken;
+  }
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  &__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 4px;
+    border: 1px solid $grey;
+
+    background-color: $white;
+
+    -webkit-transition: background .2s linear;
+    -o-transition: background .2s linear;
+    transition: background .2s linear;
+    &:hover {
+      background-color: $grey;
+    }
+    &:hover .social__icon {
+      fill: $red;
+    }
+  }
+  &__icon {
+    display: block;
+    height: 18px;
+
+    fill: $grey-ico;
+
+    -webkit-transition: fill .2s linear;
+    -o-transition: fill .2s linear;
+    transition: fill .2s linear;
+  }
+}
+
+@media (max-width: 1122px) {
+  .team {
+    padding: 60px 0 30px;
+    &__item {
+      width: 50%;
+
+      text-align: center;
+    }
+    &__img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__social {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .team {
+    &__item {
+      width: 100%;
+
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+.slider {
+  position: relative;
+
+  overflow: hidden;
+  background-color: $purple;
+  &__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  &__img-wrap {
+    position: relative;
+
+    width: 50%;
+    height: 500px;
+
+    overflow: hidden;
+  }
+  &__img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+
+    -webkit-transform: translateY(-50%);
+
+        -ms-transform: translateY(-50%);
+
+            transform: translateY(-50%);
+  }
+  &__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 50%;
+    padding-left: 80px;
+
+    color: $white;
+  }
+  &__text {
+    margin-bottom: 30px;
+
+    @include card;
+    font-style: italic;
+    font-size: 36px;
+    line-height: 1.2;
+  }
+  &__author {
+    @include rel;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.owl-carousel .owl-item img {
+width: 900px;
+}
+
+.owl-dots {
+  position: absolute;
+  bottom: 20%;
+  right: 25%;
+}
+
+.owl-dot {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  border-radius: 50%;
+  border: 0;
+
+  background-color: $white-footer;
+  &.active {
+    background-color: $white;
+  }
+}
+
+@media (max-width: 991px) {
+  .slider {
+    &__img-wrap {
+      width: 100%;
+      margin: 15px 0 40px;
+
+      overflow: hidden;
+    }
+    &__img {
+      min-width: 100%;
+    }
+    &__content {
+      width: 100%;
+      padding-left: 0;
+      padding-bottom: 40px;
+    }
+  }
+
+  .owl-dots {
+    bottom: 5%;
+    right: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .slider {
+    &__text {
+      font-size: 25px;
+    }
+  }
+  .owl-dots {
+    bottom: 2%;
+    right: 50%;
+  }
+}
+
+@media (max-width: 414px) {
+  .slider {
+    &__img {
+      right: -100px;
+    }
+  }
+}
