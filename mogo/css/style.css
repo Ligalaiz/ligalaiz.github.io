@@ -129,7 +129,7 @@ img {
     height: 100vh; }
     .main-header__overlay.active {
       display: block;
-      background-color: rgba(0, 0, 0, 0.7); }
+      background-color: transparent; }
   .main-header__toggle {
     display: none; }
   .main-header__menu {
