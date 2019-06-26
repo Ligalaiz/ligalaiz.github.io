@@ -1,0 +1,138 @@
+.main-header {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  &__logo {
+    margin-right: 25px;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    @include bebas;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  &__list a {
+    color: $grey;
+
+    transition: color 0.2s;
+    &:hover {
+      color: $red;
+      cursor: pointer;
+    }
+  }
+  &__item {
+    margin-right: 25px;
+  }
+  &__item:last-child {
+    margin-right: 0;
+  }
+  &__item--active a {
+    color: $red;
+    &:hover {
+      color: $red;
+      cursor: default;
+    }
+  }
+}
+@media (max-width: 530px) {
+    .main-header {
+      &__list {
+        display: none;
+      }
+      &__nav {
+        position: relative;
+      }
+      &__nav--btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: 50px;
+        height: 50px;
+      }
+        &__item--active a {
+          color: $white;
+      }
+    }
+    .menu-open {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: 50px;
+        height: 4px;
+        border-radius: 2px;
+
+        cursor: pointer;
+      }
+      &::before {
+        background-color: $red;
+
+        box-shadow: 0 10px 0 $red-light;
+      }
+      &::after {
+        top: -10px;
+
+        background-color: $red-light;
+      }
+      &:hover::before {
+        background-color: $red;
+        box-shadow: 0 10px 0 $red;
+      }
+      &:hover::after {
+        background-color: $red;
+      }
+    }
+
+    .menu-close {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: 50px;
+        height: 4px;
+        border-radius: 2px;
+
+        cursor: pointer;
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+
+        background-color: $red;
+        box-shadow: none;
+      }
+      &::after {
+        transform: rotate(45deg);
+        background-color: $red-light;
+      }
+    }
+    .show {
+      position: absolute;
+      right: 50px;
+      z-index: 100;
+
+      display: block;
+      padding: 20px;
+      padding-right: 40px;
+      
+      background-color: $red;
+      & .main-header__item {
+        margin-bottom: 15px;
+      }
+      & .main-header__item a:hover {
+        color: $white;
+      }
+    }
+  }

@@ -1,0 +1,32 @@
+.portfolio {
+  &__about {
+    margin-bottom: 45px;
+  }
+  &__nav {
+    margin-bottom: 45px;
+  }
+  &__link {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 10px;
+
+    @include bebas;
+    text-transform: uppercase;
+    color: $grey;
+    line-height: 1;
+    &:last-child {
+      margin-right: 0;
+    }
+    &.active {
+      color: $white;
+
+      background-color: $red;
+      &:hover {
+        color: $white;
+      }
+    }
+    &:hover {
+      color: $red;
+    }
+  }
+}
