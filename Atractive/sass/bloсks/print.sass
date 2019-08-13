@@ -1,0 +1,128 @@
+.print
+  position: relative
+
+  padding: 127px 0 569px
+
+  background-image: url("../img/print/bg.png")
+  background-repeat: no-repeat
+  background-position: calc(50% - 202px) 130px
+  background-size: 1276px 813px
+  &::after
+    content: ""
+    position: absolute
+    bottom: -20px
+    left: 50%
+    z-index: 1
+    transform: translateX(-50%)
+
+    width: 2px
+    height: 85px
+
+    background-color: #8d3dda
+    box-shadow: 9px 50px 0 0 #8d3dda
+  &::before
+    @include bef
+    top: 0
+    left: 50%
+    z-index: -1
+
+    width: 2px
+    height: 100%
+
+    background-color: rgba(81, 8, 86, 0.03)
+    box-shadow: 21em 0 0 0 rgba(81, 8, 86, 0.03), 41em 0 0 0 rgba(81, 8, 86, 0.03), -21em 0 0 0 rgba(81, 8, 86, 0.03), -41em 0 0 0 rgba(81, 8, 86, 0.03)
+  &__wrap
+    display: flex
+    justify-content: flex-end
+    align-items: center
+  &__left
+    width: 50%
+  &__right
+    position: relative
+
+    width: 50%
+    max-width: 550px
+    margin-right: 21px
+  &__btn
+    padding: 14px 47px
+  &__text
+    margin-bottom: 56px
+  & .content
+    &__subtitle
+      position: relative
+      z-index: 16
+
+      max-width: 420px
+      margin-bottom: 48px
+      &::before
+        content: "2"
+        position: absolute
+        left: -70px
+        top: -60px
+        z-index: -1
+
+        font-size: 200px
+        font-family: "Muller Hairline", "Arial", sans-serif
+        font-weight: 900
+        line-height: 1
+        color: $grey-bg
+        text-shadow: 0 0 21px $purple-bg-number
+    &__text
+      margin-bottom: 57px
+      max-width: 540px
+      &-wrap
+        max-width: 550px
+    &::before
+      content: "2"
+      position: absolute
+      left: -70px
+      z-index: -1
+
+      font-size: 200px
+      @include mul
+      font-weight: 800
+      line-height: 1
+      color: $grey-bg
+      text-shadow: 0 0 21px $purple-bg-number
+
+@media screen and (max-width: 1112px)
+  .print
+    padding-top: 137px
+    padding-bottom: 400px
+
+    background-image: url("../img/print/bg-tablet.png")
+    background-position: 106% 65%
+    background-size: 513px 599px
+    &::before
+      box-shadow: 13em 0 0 0 rgba(81, 8, 86, 0.03), -13em 0 0 0 rgba(81, 8, 86, 0.03)
+    &__right
+      width: 100%
+      max-width: none
+    & .content__subtitle
+      margin-bottom: 57px
+    &__text
+      margin-bottom: 47px
+
+@media screen and (max-width: 575px)
+  .print
+    padding-top: 69px
+    padding-bottom: 251px
+
+    background-image: url("../img/print/bg-mob.png")
+    background-position: 100% 81%
+    background-size: 268px 332px
+    &::after
+      display: none
+    & .content
+      &__subtitle
+        margin-bottom: 38px
+
+        font-size: 24px
+    &__right
+      margin-right: 0
+    &__text
+      margin-bottom: 44px
+
+      letter-spacing: -0.5px
+    &__btn
+      width: 100%

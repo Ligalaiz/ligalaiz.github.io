@@ -1,0 +1,151 @@
+.feedback
+  position: relative
+
+  padding: 130px 0 148px
+  & .content
+    &__title
+      margin-bottom: 50px
+  & .slick-slider
+    box-shadow: none
+  & .slick-next,
+  & .slick-prev
+    bottom: -30px
+  & .slick-next::after,
+  & .slick-prev::after
+      width: 90px
+  & .slick-next
+    left: calc(40% - 80px)
+  & .slick-prev
+    left: calc(30% - 80px)
+  & .content
+    &__title
+      padding-left: 11px
+      margin-bottom: 50px
+
+      letter-spacing: -0.2px
+  &::before
+    @include bef
+    top: 0
+    left: 50%
+
+    width: 2px
+    height: 100%
+
+    background-color: rgba(81, 8, 86, 0.03)
+    box-shadow: 21em 0 0 0 rgba(81, 8, 86, 0.03), 41em 0 0 0 rgba(81, 8, 86, 0.03), -21em 0 0 0 rgba(81, 8, 86, 0.03), -41em 0 0 0 rgba(81, 8, 86, 0.03)
+  &__slider-wrap
+    position: relative
+
+    max-width: 1600px
+    margin-left: auto
+    margin-right: auto
+    &::before,
+    &::after
+      @include bef
+      z-index: 16
+      width: 350px
+      height: 100%
+    &::before
+      background: linear-gradient(90deg, $white 50%, transparent)
+    &::after
+      right: 0
+      top: 0
+      background: linear-gradient(-90deg, $white 50%, transparent)
+  &__slider-list
+    display: flex
+    justify-content: center
+  &__slider-item
+    position: relative
+
+    margin-right: 20px
+    margin-top: 30px
+    margin-bottom: 30px
+    padding: 55px 95px 52px 255px
+    border-radius: 15px
+    max-width: 850px
+
+    box-shadow: 0 0 10px $purple-slider
+    background-color: $white
+    &::before
+      @include bef
+      top: 48%
+      transform: translateY(-50%)
+      left: 78px
+
+      width: 136px
+      height: 136px
+
+      background-image: url('../img/feedback/2.png')
+      background-repeat: no-repeat
+      background-position: center
+  &__slider-text
+    margin-bottom: 8px
+    max-width: 505px
+
+    font-size: 16px
+    line-height: 1.6
+  &__slider-name
+    font-size: 18px
+    font-weight: 600
+    color: $blue-dark
+  &__slider-link
+    color: $blue
+    font-size: 18px
+
+@media screen and (max-width: 991px)
+  .feedback
+    padding-top: 72px
+    padding-bottom: 107px
+    & .content
+      &__title
+        padding-left: 0
+        margin-bottom: 30px
+    &__slider
+      &-wrap::before,
+      &-wrap::after
+        display: none
+      &-item
+        max-width: 700px
+        padding-right: 55px
+        padding-left: 240px
+        &::before
+          left: 54px
+      &-text
+        line-height: 1.5
+        letter-spacing: -0.7px
+      &-name
+        letter-spacing: -0.9px
+      &-link
+        letter-spacing: -1.8px
+    & .slick
+      &-next,
+      &-prev
+        bottom: -34px
+      &-next
+        left: 36%
+      &-prev
+        left: 20%
+
+@media screen and (max-width: 575px)
+  .feedback
+    padding-top: 7px
+    padding-bottom: 82px
+    & .content
+      &__title
+        display: none
+    &__slider
+      &-item
+        max-width: 300px
+        padding: 235px 29px 52px 26px
+        &::before
+          top: 126px
+          left: 71px
+      &-text
+        margin-bottom: 34px
+    & .slick-prev,
+    & .slick-next
+      bottom: -30px
+    & .slick-prev
+      left: calc(50% - 100px)
+    & .slick-next
+      left: 50%

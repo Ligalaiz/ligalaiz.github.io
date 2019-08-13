@@ -1,0 +1,281 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+  
+    meta(name="format-detection" content="telephone=no")
+    meta(name="theme-color" content="red")
+    meta(name="keywords" content=" ... ")
+    meta(name="description" content=" ... ")
+    meta(name="google-site-verification" content="...")
+
+    title Artactive
+    
+    link(rel="apple-touch-icon", sizes="120x120", href="img/icon/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="img/icon/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="img/icon/favicon-16x16.png")
+    link(rel="manifest", href="img/icon/site.webmanifest")
+    link(rel="mask-icon", href="img/icon/safari-pinned-tab.svg", color="#b91d47")
+    meta(name="msapplication-TileColor", content="#b91d47")
+    meta(name="theme-color", content="#ffffff") 
+    
+    link(rel="stylesheet" href="css/slick.min.css")
+    link(rel="stylesheet" href="css/normalize.min.css")
+    link(href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="css/style.css")
+  body
+    div.wrapper
+      header.main-header#header
+        .container
+          .main-header__wrap#wrap
+            .main-header__title(data-scroll="#intro") Artactive
+            nav.main-nav
+              ul.main-nav__list.reset-list#nav
+                li
+                  a.main-nav__link(href="#", data-scroll="#about") О нас
+                li
+                  a.main-nav__link(href="#", data-scroll="#service") Услуги
+                li
+                  a.main-nav__link(href="#", data-scroll="#print") Отзывы
+                li
+                  a.main-nav__link(href="#", data-scroll="#faq") Faq
+                li
+                  a.main-nav__link.main-nav__link--contact(href="#", data-scroll="#map") Контакты
+                li
+                  a.main-nav__link.main-nav__link--tel(href="tel:+79201488131") +7 (920) 148 81 31
+              .main-nav__call
+                a.main-nav__link.main-nav__link--btn(href="#") Заказать звонок
+            button.main-header__toggle#nav_toggle(type="button") 
+              span.main-header__toggle-item Menu
+                
+      section.section.intro#intro
+        .container
+          .main-header__overlay#overlay
+          .intro__wrap
+            .intro__item.intro__item--img
+            .intro__item.intro__item--right
+              .intro__item-wrap
+                 h2.intro__title Размер не&nbsp;имеет значения!
+                 p.intro__text Оперативная полиграфия и&nbsp;широкоформатная печать любого размера
+                 .intro__content
+                   a.intro__link.btn Заказать печать
+                   p.intro__content-text с доставкой по Ярославлю и Ярославской области          
+          .mouse
+            span.mouse__wheel
+      //end  section
+      
+      section.section.about#about
+        .container
+          .about__wrap
+            .about__left.algorithm
+              .algorithm__list
+                .algorithm__item.algorithm__item--reception
+                  p.algorithm__text Приём и детальное обсуждение заказа
+                .algorithm__item.algorithm__item--creat
+                  p.algorithm__text Создание и согласование дизайн-макета
+                .algorithm__item.algorithm__item--print
+                  p.algorithm__text Печать и постпечатная обработка изделий любых размеров
+                .algorithm__item.algorithm__item--delivery
+                  p.algorithm__text Доставка готовой продукции
+            .about__right.content
+              .content__wrap
+                h2.content__title 1. О нас
+                p.content__subtitle Полный спектр услуг — от дизайна до печати
+                .content__text-wrap 
+                  p.content__text.
+                                    К вашим услугам мы предлагаем полный спектр работ, начиная 
+                                    от печати открыток, чертежей, баннеров, растяжек, создания буклетов 
+                                    и эксклюзивных календарей, и заканчивая постпечатной обработкой. 
+                  p.content__text.
+                                    В копицентре не просто предоставляют услуги печати: мы ориентируемся 
+                                    на комплексное обслуживание. Все услуги, будь то оперативная цифровая печать 
+                                    открыток или разработка серии календарей, Вы можете получить 
+                                    в одном месте, воспользовавшись сопутствующими услугами копицентра. 
+                  p.content__text.                  
+                                    При этом работа выполняется в максимально сжатые сроки и не в ущерб качеству 
+                                    конечного результата, которое неизменно остается на высоте.
+      //end  section
+             
+      section.section.service#service
+        .container
+          .service__wrap
+            .service__left
+              h2.content__title 2. Услуги
+              p.content__subtitle Широкоформатная печать баннеров, растяжек, афиш
+              .content__text-wrap 
+                ul.content__list.reset-list
+                  li.content__item подготовка макетов к печати, дизайн рекламных баннеров
+                  li.content__item срочная печать за 3 часа
+                  li.content__item проварка карманов и сварка нескольких изображений
+                  li.content__item пробивка люверсов и вварка монтажных тросов
+                  li.content__item изготовление цветопробы
+                  li.content__item доставка баннеров
+              .service__order.order
+                p.order__text <span class="order__text--small">Есть вопросы?</span><br> Закажите консультацию
+                a.order__link.btn(href="#") Заказать
+            .service__right
+              .service__slider-wrap 
+                .service__slider.slider
+                  ul.slider__list
+                    li.slider__item 
+                      img(src="img/service/1.jpg", alt="")
+                    li.slider__item 
+                      img(src="img/service/2.jpg", alt="")
+                    li.slider__item 
+                      img(src="img/service/3.jpg", alt="") 
+                    li.slider__item 
+                      img(src="img/service/4.jpg", alt="")  
+              .service__order.order
+                p.order__text <span class="order__text--small">Есть вопросы?</span><br> Закажите консультацию
+                a.order__link.btn(href="#") Заказать   
+      //end  section  service
+        
+      section.section.print#print
+        .container
+          .print__wrap
+            .print__right
+              p.content__subtitle Широкоформатная печать для вашего интерьера
+              .content__text-wrap
+                p.print__text.
+                  Печатаем широкоформатные фотографии на глянцевой и матовой фотобумаге 
+                  разной плотности, на глянцевом и матовом холсте или на самоклеющейся 
+                  пленке. также можем предложить обработку и редактирование ваших 
+                  фотографий силами наших дизайнеров: композиции, фотоколлаж, ретушь, 
+                  различные эффекты
+                a.print__btn.btn(href="#") Оставить заявку
+      //end  section  print
+      
+      section.section.polygraphy
+        .container
+          .polygraphy__wrap
+            .polygraphy__left
+              .polygraphy__promo
+                p.content__subtitle Оперативная полиграфия&nbsp;— от визитки до баннера
+                .content__text-wrap
+                  p.polygraphy__text.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volup-
+                    tate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  p.polygraphy__text.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+                    mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error. 
+              form.polygraphy__form.form(action="/")
+                p.form__question Есть вопросы?
+                p.form__consult Оставьте заявку на консультацию 
+                input.form__name(type="text", id="name", placeholder="Имя")
+                input.form__phone(type="tel", id="tel", placeholder="Телефон")
+                button.form__btn.btn(type="submit") Отправить
+      //end  section  polygraphy
+      
+      section.section.feedback
+        .container
+          h2.content__title 3. Отзывы 
+        .feedback__slider 
+          .feedback__slider-wrap 
+            .feedback__slider-list.feedback__list
+            
+              .feedback__slider-item 
+                p.feedback__slider-text.
+                  Обратился в компанию АртАктив за визитками. Это мой первый опыт, 
+                  поэтому немного нервничал, не знал, с чего начать. Остался доволен, 
+                  потому что мне всё объяснили, показали и сделали по высшему разряду. 
+                  Советую!
+                p.feedback__slider-name Александров Максим, 24 года
+                a.feedback__slider-link vk.com/mr.sharp
+                
+              .feedback__slider-item 
+                p.feedback__slider-text.
+                  Обратился в компанию АртАктив за визитками. Это мой первый опыт, 
+                  поэтому немного нервничал, не знал, с чего начать. Остался доволен, 
+                  потому что мне всё объяснили, показали и сделали по высшему разряду. 
+                  Советую!
+                p.feedback__slider-name Александров Максим, 24 года
+                a.feedback__slider-link vk.com/mr.sharp
+                
+              .feedback__slider-item 
+                p.feedback__slider-text.
+                  Обратился в компанию АртАктив за визитками. Это мой первый опыт, 
+                  поэтому немного нервничал, не знал, с чего начать. Остался доволен, 
+                  потому что мне всё объяснили, показали и сделали по высшему разряду. 
+                  Советую!
+                p.feedback__slider-name Александров Максим, 24 года
+                a.feedback__slider-link vk.com/mr.sharp
+      //end  section  feedback
+      
+      section.section.faq#faq
+        .container
+          h2.content__title 4. Частые вопросы (FAQ)
+          .faq__wrap 
+            .faq__left 
+              .faq__item 
+                p.faq__question Что такое макет?
+                p.faq__answer.
+                  Макет — это будущее печатное изделие в электронном формате. Верстают 
+                  (собирают) макет в специализированном программном обеспечении. 
+              .faq__item 
+                p.faq__question У меня есть готовый макет
+                p.faq__answer.
+                  Вы можете привезти его к нам в офис на любом удобном для вас носителе 
+                  (диск, флешка). В присутствии вас мы обработаем ваш макет и отправим 
+                  его&nbsp;в производство.
+              .faq__item 
+                p.faq__question У меня нет макета
+                p.faq__answer.
+                  В нашем штате работают професиональные дизайнеры, которые с ваших слов 
+                  или в вашем присутствии сверстают макет, который после утверждения также 
+                  будет отправлен в печать.
+            .faq__right 
+              .faq__item 
+                p.faq__question Сколько времени занимает печать?
+                p.faq__answer.
+                  В том случае если изображение готово к печати, изготовление занимает 
+                  около&nbsp;3&nbsp;часов.&nbsp;Также время изготовления зависит от нашей загруженности.
+              .faq__item 
+                p.faq__question Я не могу приехать к вам в офис
+                p.faq__answer.
+                  Отправьте нам изображение по электронной почте, укажите свой телефон. 
+                  Мы&nbsp;свяжемся с вами для уточнения деталей. Готовое изделие мы доставим вам 
+                  курьером.              
+              .faq__item 
+                p.faq__question Вызов курьера бесплатный?
+                p.faq__answer.
+                  В зависимости от соимости заказа, курьер может доставить вам продукцию 
+                  бесплатно (при соимости от 600 руб.) или от 150 руб. в пределах Ярославля и&nbsp;до 
+                  500 руб. в пределах Ярославской области.
+            form.polygraphy__form.form(action="/")
+              .form__wrap
+                p.form__question Остались вопросы?
+                p.form__consult Оставьте заявку на консультацию 
+                input.form__name(type="text", id="name", placeholder="Имя")
+                input.form__phone(type="tel", id="tel", pattern="[0-9]{1}[0-9]{3}-[0-9]{3}-[0-9]{4}", placeholder="Телефон")
+                button.form__btn.btn(type="submit") Отправить
+      //end  section  faq
+      
+      section.section.map#map
+        .container
+          .map__wrap 
+            .map__contact
+              h2.content__title 5. Контакты 
+              p.map__item.address г. Ярославль, проспект Октября, 88
+              p.map__item.email art-aktiv.76@mail.ru
+              a.map__item.tel(href='tel:79201488131') +7 (920) 148 81 31
+        //end  section  map
+      section.main__footer
+        .container
+          .main__footer-wrap
+            .main__footer-item
+              p.main__footer-text ООО «АртАктив», 2019 ©
+            .main__footer-item
+              a.main__footer-link(href='#')
+                p.main__footer-text.policy Политика конфиденциальноси
+            .main__footer-item
+              a.main__footer-designer(href='http://strogiy.ru/')
+                p.main__footer-text Designed by Sergey Strogiy
+      //end  section  footer
+      
+    script(src="js/libs-js/jquery-3.3.1.min.js")
+    script(src="js/libs-js/slick.min.js")
+    script(src="js/script.min.js")

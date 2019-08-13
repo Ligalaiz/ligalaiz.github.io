@@ -1,0 +1,87 @@
+.map
+  min-height: 653px
+
+  background-image: url('../img/map/map.jpg')
+  background-repeat: no-repeat
+  background-size: 1920px 653px
+  background-position-x: center
+  & .content
+    &__title
+      margin-bottom: 55px
+
+      letter-spacing: 0
+  &__wrap
+    position: relative
+  &__contact
+    position: absolute
+    left: 1%
+    top: 120px
+
+    padding: 85px 105px 115px 90px
+    border-radius: 15px
+    max-width: 465px
+
+    background-color: $white
+  &__item
+    position: relative
+
+    margin-bottom: 18px
+    padding-left: 30px
+
+    color: $grey-text
+    &.address
+      letter-spacing: 0.2px
+    &::before
+      @include bef
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+
+      background-repeat: no-repeat
+      background-position: center
+.address::before
+  width: 11px
+  height: 17px
+
+  background-image: url('../img/map/1.png')
+.email::before
+  width: 13px
+  height: 10px
+
+  background-image: url('../img/map/2.png')
+.tel::before
+  width: 14px
+  height: 15px
+
+  background-image: url('../img/map/3.png')
+
+#map
+  height: 653px
+  width: 100%
+
+@media screen and (max-width: 991px)
+  .map
+    &__contact
+      top: 60px
+      left: 0
+
+      padding: 65px 65px 75px 55px
+
+  #map
+    height: 470px
+    min-height: unset
+
+    background-position-x: 53%
+
+@media screen and (max-width: 750px)
+  .map
+    &__contact
+      top: 67px
+
+      padding: 42px 58px 57px 38px
+    & .content__title
+      margin-bottom: 23px
+    &__item
+      margin-bottom: 20px
+
+      line-height: 1.3

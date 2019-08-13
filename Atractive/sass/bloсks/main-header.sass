@@ -1,0 +1,155 @@
+.main-header
+  position: absolute
+  left: 0
+  top: 0
+  right: 0
+
+  width: 100%
+
+  z-index: 1000
+  font-size: 32px
+  &__overlay
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 100
+
+    display: none
+    width: 100vw
+    height: 100vh
+    &.active
+      display: block
+
+      background-color: $black-overlay
+  &__wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 60px 15px 30px
+  &__title
+     font-size: 18px
+     line-height: 1
+     text-transform: uppercase
+     color: $white
+     font-weight: 800
+     letter-spacing: 0.9px
+  &__toggle
+    display: none
+.main-nav
+  display: flex
+  justify-content: space-between
+  &__link
+    display: block
+    margin-right: 20px
+
+    font-size: 13px
+    text-transform: uppercase
+    color: $white
+
+    transition: color .2s linear
+    &:hover::before,
+    &.active::before
+      opacity: 1
+    &.active
+      color: $yellow
+    &:hover
+      color: $pink
+    &--tel
+      font-size: 16px
+      letter-spacing: 0.8px
+    &--btn
+      margin-right: 0
+      padding: 7px 25px
+
+      font-size: 11px
+      letter-spacing: 0.55px
+
+      border: 2px solid $white
+      border-radius: 17px
+
+      transition: all .2s linear
+      &:hover
+        color: $white
+
+        background-color: $pink
+        border-color: $pink
+
+        transform: scale(1.1)
+      &:active
+        background-color: transparent
+        box-shadow: 0 0 10px 8px $pink
+  &__list
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 720px
+    margin-right: 13px
+.fixed
+  position: fixed
+
+  background-color: $purple
+.fit
+  padding-top: 10px
+  padding-bottom: 10px
+
+@media screen and (max-width: 1139px)
+  .main-nav__list
+    width: 520px
+
+@media screen and (max-width: 1112px)
+  .main-nav
+    display: none
+    &.active
+      position: absolute
+      right: 0
+      top: 0
+
+      display: block
+      width: 100%
+      max-width: 320px
+      padding: 65px 0 100px
+
+      background-color: $white
+    &__link
+      padding: 10px 70px
+      margin-right: 0
+
+      font-size: 13px
+      color: $grey-text
+
+      background: $white
+      &--contact
+        margin-bottom: 60px
+      &--tel
+        font-size: 16px
+        font-weight: 700
+      &:hover
+        background-color: $purple
+      &--btn
+        padding-left: 30px
+        padding-right: 30px
+        margin-left: 70px
+        width: 200px
+        border: 2px solid $pink
+    &__list
+      display: block
+      max-width: 320px
+  .main-header
+    &__wrap
+      padding-top: 25px
+      padding-left: 0
+    &__toggle
+      right: 17px
+
+      width: 24px
+      display: block
+      &.active .main-header__toggle-item::before,
+      &.active .main-header__toggle-item::after
+        background-color: $grey-text
+
+@media screen and (max-width: 760px)
+  .main-header
+    &__wrap
+      padding-top: 20px
+    &__toggle
+      top: 20px

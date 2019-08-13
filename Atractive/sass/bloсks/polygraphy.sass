@@ -1,0 +1,149 @@
+.polygraphy
+  position: relative
+
+  padding: 135px 0 159px
+  min-height: 540px
+
+  background-color: $grey-bg
+  background-image: url("../img/polygraphy/bg.png")
+  background-repeat: no-repeat
+  background-size: 685px 709px
+  background-position: calc(50% + 357px) -5%
+  &__wrap
+    margin-left: 12px
+  &__promo
+    margin-bottom: 110px
+  & .content
+    &__title
+      letter-spacing: -0.4px
+      margin-bottom: 75px
+    &__subtitle
+      position: relative
+      z-index: 16
+
+      max-width: 450px
+      margin-bottom: 49px
+
+      letter-spacing: 0.7px
+      &::before
+        content: "3"
+        position: absolute
+        left: -70px
+        top: -60px
+        z-index: -1
+
+        font-size: 200px
+        font-family: "Muller Hairline", "Arial", sans-serif
+        font-weight: 900
+        line-height: 1
+        color: $grey-bg
+        text-shadow: 0 0 21px $purple-bg-number
+    &__text-wrap
+      max-width: 570px
+    &::before
+      content: "3"
+      position: absolute
+      left: -70px
+      z-index: -1
+
+      font-size: 200px
+      @include mul
+      font-weight: 800
+      line-height: 1
+      color: $grey-bg
+      text-shadow: 0 0 21px $purple-bg-number
+  &__text
+    &:first-child
+      margin-bottom: 23px
+  &__left
+    width: 70%
+  &__right
+    width: 30%
+  &__img-wrap
+    position: absolute
+    right: 13%
+    top: -5px
+    z-index: 0
+
+    width: 685px
+.form
+  position: relative
+
+  min-width: 763px
+  &__question
+    font-size: 16px
+    font-style: italic
+  &__consult
+    margin-bottom: 26px
+
+    font-weight: 600
+    font-size: 20px
+    letter-spacing: 0.4px
+  &__name,
+  &__phone
+    position: relative
+
+    width: 240px
+    border: none
+    padding: 0 18px 10px
+    border-bottom: 1px solid $grey
+    margin-right: 40px
+
+    font-style: italic
+
+    background-color: transparent
+  &__btn
+    margin-left: 4px
+    padding-left: 44px
+    padding-right: 44px
+
+@media screen and (max-width: 1112px)
+  .polygraphy
+    padding-top: 105px
+    padding-bottom: 118px
+
+    background-image: url("../img/polygraphy/bg-tablet.png")
+    background-position: calc(50% + 150px) 85%
+    background-size: 528px 381px
+    &__wrap
+      margin-left: 0
+    &__left
+      width: 100%
+    &__promo
+      margin-bottom: 70px
+    & .content
+      &__text-wrap
+        max-width: 644px
+
+        letter-spacing: -1px
+    & .form
+      max-width: 400px
+      min-width: unset
+      &__consult
+        max-width: 190px
+        margin-bottom: 31px
+      &__name
+        margin-bottom: 31px
+      &__phone
+        margin-bottom: 33px
+      &__btn
+        margin-left: 1px
+        padding-left: 68px
+        padding-right: 68px
+
+@media screen and (max-width: 750px)
+  .polygraphy
+    padding-top: 68px
+    padding-bottom: 61px
+
+    background-image: url("../img/polygraphy/bg-mob.png")
+    background-position: 63% 57.6%
+    background-size: 304px 255px
+    & .content__subtitle
+      font-size: 24px
+      letter-spacing: 0.4px
+    &__promo
+      margin-bottom: 314px
+    & .form
+      &__btn
+        width: 100%

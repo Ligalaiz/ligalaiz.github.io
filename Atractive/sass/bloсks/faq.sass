@@ -1,0 +1,214 @@
+.faq
+  position: relative
+
+  padding-bottom: 170px
+  & .content
+    &__title
+      padding-left: 11px
+      margin-bottom: 59px
+
+      letter-spacing: -0.4px
+  &::after
+    content: ""
+    position: absolute
+    bottom: -20px
+    left: 50%
+    z-index: 1
+    transform: translateX(-50%)
+
+    width: 2px
+    height: 85px
+
+    background-color: #8d3dda
+    box-shadow: 9px 50px 0 0 #8d3dda
+  &::before
+    @include bef
+    top: 0
+    left: 50%
+
+    width: 2px
+    height: 100%
+
+    background-color: rgba(81, 8, 86, 0.03)
+    box-shadow: 21em 0 0 0 rgba(81, 8, 86, 0.03), 41em 0 0 0 rgba(81, 8, 86, 0.03), -21em 0 0 0 rgba(81, 8, 86, 0.03), -41em 0 0 0 rgba(81, 8, 86, 0.03)
+  &__wrap
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    padding-left: 12px
+  &__left,
+  &__right
+    width: 50%
+    max-width: 530px
+    margin-bottom: 61px
+  &__left &__item:last-child,
+  &__right &__item:last-child
+    margin-bottom: 0
+  &__right
+    max-width: 565px
+    padding-left: 16px
+  &__left
+    margin-right: 40px
+  &__item
+    margin-bottom: 40px
+  &__question
+    margin-bottom: 22px
+
+    font-size: 20px
+    font-weight: 600
+    letter-spacing: 0.5px
+    color: $blue-dark
+  &__answer
+    font-size: 16px
+    letter-spacing: -0.7px
+  & .form
+    width: 100%
+  & .form__wrap
+    position: relative
+
+    max-width: 1141px
+    padding: 38px 70px 22px 310px
+    border-radius: 15px
+
+    color: $white
+
+    background-image: url('../img/faq/bg.png')
+    background-repeat: no-repeat
+    background-size: cover
+    &::before
+      content: '?'
+      position: absolute
+      top: 0
+      left: 30px
+
+      width: 241px
+      height: 219px
+      padding-top: 53px
+
+      @include mul
+      font-size: 70px
+      font-weight: 600
+      text-align: center
+
+      background-image: url('../img/faq/1.png')
+      background-repeat: no-repeat
+  & .form
+    min-width: unset
+    &__consult
+      margin-bottom: 25px
+
+      font-size: 20px
+      letter-spacing: 0.6px
+    &__name::placeholder,
+    &__phone::placeholder
+      color: $white
+    &__name,
+    &__phone
+      margin-bottom: 30px
+      margin-right: 35px
+    &__question
+      margin-bottom: 5px
+
+      font-size: 16px
+    &__btn
+      margin-left: 12px
+
+@media screen and (min-width: 1112px) and (max-width: 1180px)
+  .faq__left
+    margin-right: 0
+@media screen and (max-width: 1112px)
+  .faq
+    padding-bottom: 105px
+    &::after
+      left: 78%
+    & .content
+      &__title
+        padding-left: 0
+        margin-bottom: 50px
+
+        letter-spacing: -0.6px
+    &__wrap
+      padding-left: 0
+    &__left,
+    &__right
+      width: 100%
+      max-width: none
+    &__left
+      margin-bottom: 30px
+    &__right
+      padding-left: 0
+      margin-bottom: 50px
+    &__item
+      margin-bottom: 32px
+    &__question
+      margin-bottom: 20px
+    & .form
+      &__wrap
+        padding-left: 32px
+        padding-right: 30px
+        &::before
+          top: -61px
+          right: -29px
+          left: auto
+          z-index: 1
+      &__consult
+        margin-bottom: 23px
+
+        letter-spacing: 0.5px
+      &__name,
+      &__phone
+        width: 185px
+      &__btn
+        position: relative
+
+        margin-left: 17px
+        z-index: 2
+
+@media screen and (max-width: 750px)
+  .faq
+    padding-bottom: 84px
+    &::after
+      display: none
+    & .content
+      &__title
+        margin-bottom: 38px
+    &__left
+      margin-bottom: 33px
+      margin-right: 0
+    &__right
+      margin-bottom: 55px
+      & .faq__item
+        margin-bottom: 30px
+    &__item
+      margin-bottom: 27px
+    &__question
+      letter-spacing: 0
+    &__answer
+      letter-spacing: -0.8px
+    & .form
+      &__wrap
+        padding: 38px 22px 56px 24px
+        border-radius: 12px
+        &::before
+          top: -46px
+          right: -73px
+
+          width: 169px
+          height: 149px
+          padding-top: 38px
+          padding-right: 9px
+
+          font-size: 47px
+
+          background-size: 169px 149px
+      &__consult
+        margin-bottom: 31px
+        max-width: 180px
+      &__phone,
+      &__name
+        width: 100%
+      &__phone
+        margin-bottom: 40px
+      &__btn
+        width: 100%
+        margin-left: 0

@@ -1,0 +1,46 @@
+.main__footer
+  bottom: 0
+
+  background-color: $purple-footer
+  &-wrap
+    display: flex
+    justify-content: space-between
+    padding-top: 14px
+    padding-bottom: 10px
+
+    color: $white
+  &-link,
+  &-designer
+    color: $white
+
+  & .policy
+    position: relative
+    &::after
+      @include bef
+      bottom: -1px
+      left: 0
+
+      width: 100%
+      height: 1px
+
+      background-color: $white
+      opacity: 1
+
+      transition: all .2s linear
+    &:hover::after
+      opacity: 0
+
+@media screen and (max-width: 750px)
+  .main__footer
+    &-wrap
+      justify-content: center
+      flex-wrap: wrap
+      align-items: center
+    &-item
+      margin-bottom: 15px
+      margin-right: 15px
+
+@media screen and (max-width: 394px)
+  .main__footer
+    &-item
+      margin-right: 0
