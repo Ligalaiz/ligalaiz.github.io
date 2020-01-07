@@ -5,17 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
-      href="htttps://cdn.muicss.com/mui-latest/css/mui.min.css"
+      href="https://cdn.muicss.com/mui-latest/css/mui.min.css"
       rel="stylesheet"
       type="text/css"
     />
-    <link href="static/style.css" rel="stylesheet" type="text/css" />
-    <script src="htttps://cdn.muicss.com/mui-latest/js/mui.min.js"></script>
+    <script src="https://cdn.muicss.com/mui-latest/js/mui.min.js"></script>
+    <title>Questions</title>
   </head>
   <body>
+    <button
+      class="mui-btn mui-btn--fab mui-btn--accent floating-btn"
+      id="modal-btn"
+    >
+      All
+    </button>
     <div id="sidebar">
       <div class="mui--text-white mui--text-display1 mui--align-vertical">
-        SAMPLE BLOG
+        Questions
+        <br />
       </div>
     </div>
     <div id="content" class="mui-container-fluid">
@@ -23,51 +30,38 @@
         <div class="mui-col-sm-10 mui-col-sm-offset-1">
           <br />
           <br />
-          <div class="mui--text-black-54 mui--text-body2">PINNED POST</div>
+          <div class="mui--text-black-54 mui--text-body2">Ask a question</div>
           <div class="mui-divider"></div>
           <br />
-          <div class="mui--text-headline">MUI Acquires New Features</div>
-          <div class="mui--text-black-54">
-            By <a href="#">Team MUI</a> 3 days ago
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-            facilisis aliquam ipsum sed dignissim. Sed ac accumsan odio. Vivamus
-            tristique dignissim neque. Interdum et malesuada fames ac ante ipsum
-            primis in faucibus. Nunc cursus felis nec purus condimentum
-            vestibulum. Donec mauris nisi, sollicitudin eget iaculis id,
-            suscipit id odio. <a href="#">Read more...</a>
-          </div>
+
+          <form class="mui-form" id="form">
+            <div class="mui-textfield mui-textfield--float-label">
+              <input
+                type="text"
+                id="question-input"
+                required
+                minlength="10"
+                maxlength="256"
+              />
+              <label for="question-input">What do you want to ask?</label>
+            </div>
+            <button
+              type="submit"
+              id="submit"
+              disabled
+              class="mui-btn mui-btn--raised mui-btn--primary"
+            >
+              Ask a question
+            </button>
+          </form>
+
           <br />
           <br />
-          <div class="mui--text-black-54 mui--text-body2">RECENT POSTS</div>
+          <div class="mui--text-black-54 mui--text-body2">Your questions</div>
           <div class="mui-divider"></div>
           <br />
-          <div class="mui--text-headline">MUI Acquires New Features</div>
-          <div class="mui--text-black-54">
-            By <a href="#">Team MUI</a> 1 week ago
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-            facilisis aliquam ipsum sed dignissim. Sed ac accumsan odio. Vivamus
-            tristique dignissim neque. Interdum et malesuada fames ac ante ipsum
-            primis in faucibus. Nunc cursus felis nec purus condimentum
-            vestibulum. Donec mauris nisi, sollicitudin eget iaculis id,
-            suscipit id odio. <a href="#">Read more...</a>
-          </div>
-          <br />
-          <div class="mui--text-headline">MUI Acquires New Features</div>
-          <div class="mui--text-black-54">
-            By <a href="#">Team MUI</a> 3 weeks ago
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-            facilisis aliquam ipsum sed dignissim. Sed ac accumsan odio. Vivamus
-            tristique dignissim neque. Interdum et malesuada fames ac ante ipsum
-            primis in faucibus. Nunc cursus felis nec purus condimentum
-            vestibulum. Donec mauris nisi, sollicitudin eget iaculis id,
-            suscipit id odio. <a href="#">Read more...</a>
-          </div>
+
+          <div id="list"></div>
         </div>
       </div>
     </div>
