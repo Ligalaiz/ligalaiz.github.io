@@ -1,9 +1,12 @@
-import "./styles.css";
+import { Question } from "./question";
 import { isValid } from "./utils";
+import "./styles.css";
 
 const form = document.getElementById("form");
 const input = form.querySelector("#question-input");
 const submitBtn = form.querySelector("#submit");
+
+window.addEventListener("load", Question.renderList);
 
 form.addEventListener("submit", submitFormHandler);
 input.addEventListener("input", () => {
@@ -20,10 +23,10 @@ function submitFormHandler(event) {
     };
 
     submitBtn.disabled = true;
-    console.log("Question", question);
-
-    input.value = "";
-    input.className = "";
-    submitBtn.disabled = false;
+    Question.create(question).then(() => {
+      input.value = "";
+      input.className = "";
+      submitBtn.disabled = false;
+    });
   }
 }
