@@ -1,3 +1,5 @@
+import React from "react";
+
 import Header from "../header";
 import RandomPlanet from "../random-planet";
 import ItemList from "../item-list";
@@ -16,9 +18,11 @@ const App = () => {
           <ItemList />
         </div>
         <div className="col-md-6">
-          <PerosnDetails />
+          <PersonDetails />
         </div>
       </div>
     </div>
   );
 };
+
+export default App;
