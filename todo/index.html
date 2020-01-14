@@ -4,7 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>To Do List</title>
   </head>
-  <body></body>
+  <body onload="tasker.construct();">
+    <div id="tasker" class="tasker">
+      <div id="error" class="error">Please enter a task</div>
+      <div id="tasker-header" class="tasker-header">
+        <input type="text" id="input-task" placeholder="Enter a task" />
+        <button id="add-task-btn"><i class="fa fa-fw fa-plus"></i></button>
+      </div>
+      <div class="tasker-body">
+        <ul id="tasks"></ul>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
 </html>
