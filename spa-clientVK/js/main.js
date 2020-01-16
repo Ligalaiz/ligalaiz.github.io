@@ -1,5 +1,6 @@
 import Model from "../model/model.js";
 import View from "../view/view.js";
+import Router from "../router/router.js";
 
 (async () => {
   try {
@@ -8,6 +9,7 @@ import View from "../view/view.js";
     const [me] = await Model.getUser({ name_case: "gen" });
 
     header.innerHTML = View.render("header", me);
+    Router.init();
   } catch (e) {
     console.error(e);
     alert("Error: " + e.message);
