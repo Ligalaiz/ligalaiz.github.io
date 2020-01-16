@@ -18,10 +18,59 @@
   <body>
     <div class="container">
       <div class="header"></div>
+
+      <div class="btn-group  btn-group-lg">
+        <a href="#friends" class="btn btn-default" data-role="nav-friends"
+          >Firends</a
+        >
+        <a href="#news" class="btn btn-default" data-news="nav-friends">News</a>
+      </div>
+
+      <hr />
+
+      <div id="results"></div>
     </div>
     <script src="js/main.js" type="module"></script>
+
     <script id="headerTemplate" type="text/template">
       <h1>VK Data {{first_name}} {{last_name}}</h1>
+    </script>
+
+    <script id="friendsTemplate" type="text/template">
+      <div>
+        <div class="flex-container">
+          {{#each list}}
+          <div class="friend text-center">
+            <a href="#friends/{{id}}"><img src="{{photo_100}}" class="img-circle"></a>
+            <div>{{first name}}<br>{{last name}}</div>
+            <div>{{formatBDay bdate}}</div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </script>
+    <script id="friendTemplate" type="text/template">
+      <div>
+        <img src="{{photo_100}}" alt="" class="img-circle">
+        <div>{{first_name}}{{last_name}}</div>
+        <div>{{country.title}}{{city.title}}</div>
+        {{#if bdate}}
+        <div>Birthday: {{formatBDay bdate}}</div>
+        {{/if}}
+      </div>
+    </script>
+    <script id="newsTemplate" type="text/template">
+      <div class="news">
+        {{#each list}}
+        {{#if text}}
+        <div class="post">
+          <b>{{formatDate date}}</b>
+          <div class="post-text">{{text}}</div>
+        </div>
+        <hr>
+        {{/if}}
+        {{/each}}
+      </div>
     </script>
   </body>
 </html>

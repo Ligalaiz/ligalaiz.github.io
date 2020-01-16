@@ -1,0 +1,8 @@
+.flex-container {
+  display: flex;
+  font-weight: wrap;
+}
+
+.friend {
+  margin: 15px;
+}
