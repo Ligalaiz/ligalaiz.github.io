@@ -1,6 +1,6 @@
 export default {
   render(templateName, model) {
-    templateName = tempalteName + "Template";
+    templateName = templateName + 'Template';
 
     const templateElement = document.getElementById(templateName);
     const templateSource = templateElement.innerHTML;

@@ -1,7 +1,6 @@
-import View from "../view/view";
+import View from "../view/view.js";
 
-const resultsNode = document.querySelector("#results");
-
+const resultsNode = document.querySelector('#results');
 let friend = {};
 
 export default {
@@ -10,6 +9,6 @@ export default {
   },
 
   render() {
-    resultsNode.innerHTML = View.render("friend", friend);
+    resultsNode.innerHTML = View.render('friend', friend);
   }
 };

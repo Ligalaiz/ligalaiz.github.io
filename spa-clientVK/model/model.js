@@ -2,7 +2,6 @@ export default {
   login(appId, perms) {
     return new Promise((resolve, reject) => {
       VK.init({ apiId: appId });
-
       VK.Auth.login(response => {
         if (response.session) {
           resolve(response);
@@ -14,7 +13,7 @@ export default {
   },
 
   callApi(method, params) {
-    params.v = params.v || "5.78";
+    params.v = params.v || "5.95";
 
     return new Promise((resolve, reject) => {
       VK.api(method, params, response => {
@@ -27,7 +26,7 @@ export default {
     });
   },
   getUser(params = {}) {
-    return this.callApi("user.get", params);
+    return this.callApi("users.get", params);
   },
   getFriends(params = {}) {
     return this.callApi("friends.get", params);

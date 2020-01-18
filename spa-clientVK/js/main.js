@@ -7,7 +7,8 @@ Handlebars.registerHelper("formatTime", time => {
 
   return minutes + ":" + seconds;
 });
-Handlebars.registerHelper("formatTime", bday => {
+
+Handlebars.registerHelper("formatBDay", bday => {
   const months = [
     "january",
     "february",
@@ -26,7 +27,8 @@ Handlebars.registerHelper("formatTime", bday => {
 
   return [day, months[month - 1]].join(" ");
 });
-Handlebars.registerHelper("formatTime", ts => {
+
+Handlebars.registerHelper("formatDate", ts => {
   return new Date(ts * 1000).toLocaleString();
 });
 
@@ -37,13 +39,13 @@ import Router from "../router/router.js";
 (async () => {
   try {
     const header = document.querySelector("#header");
-    await Model.login(5267932, 2 | 8192);
+    await Model.login(7285471, 2 | 8192);
     const [me] = await Model.getUser({ name_case: "gen" });
 
     header.innerHTML = View.render("header", me);
     Router.init();
   } catch (e) {
     console.error(e);
-    alert("Error: " + e.message);
+    window.alert("Ошибка: " + e.message);
   }
 })();
