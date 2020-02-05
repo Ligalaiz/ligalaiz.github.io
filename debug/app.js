@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function displayResult(result) {
     output.closest(".card").style.display = "block";
     output.innerHTML = `Result = ${result}`;
+    console.trace();
   }
 
   addBtn.addEventListener("click", addHandler);
